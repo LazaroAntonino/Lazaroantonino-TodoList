@@ -9,3 +9,99 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body {
+    background-color: #ffffff;
+}
+.list-item {
+    position: relative;
+    /* Para asegurar que el hijo (span) sea posicionado relativamente */
+}
+
+.borrar-botón {
+    display: none;
+    /* Oculta inicialmente el botón */
+    color: rgb(255, 0, 0);
+    /* Cambia el estilo de la "X" si lo deseas */
+    cursor: pointer;
+    /* Muestra un puntero en el hover */
+}
+
+.list-item:hover .borrar-botón {
+    display: inline;
+    /* Muestra el botón cuando el ratón está sobre el elemento */
+}
+.fondo-primavera {
+    background-color: #ffe5e5; /* Crema con tono rojizo */
+  }
+  
+  .fondo-vintage {
+    background-color: #e5ffe5; /* Crema con tono verdoso */
+  }
+  
+  .fondo-suave {
+    background-color: #e5f7ff; /* Crema con tono azulado */
+  }
+  
+  .fondo-dorado {
+    background-color: #fff7e5; /* Crema con tono naranja */
+  }
+  
+  .fondo-marfil {
+    background-color: #f3e5ff; /* Crema con tono morado */
+  }
+  
+  .fondo-seda {
+    background-color: #ffffe5; /* Crema amarillo claro */
+  }
+  
+  .fondo-pureza {
+    background-color: #ffe5f3; /* Crema con tono rosa claro */
+  }
+  
+  .fondo-tranquilo {
+    background-color: #e5ffe9; /* Crema con tono verde suave */
+  }
+  
+  .fondo-cremoso {
+    background-color: #e5f3ff; /* Crema con tono azul pastel */
+  }
+  
+  .fondo-lujo {
+    background-color: #ffe9e5; /* Crema con tono coral */
+  }
+  
+  .fondo-tierra {
+    background-color: #fff2e5; /* Crema con tono marrón claro */
+  }
+  
+  .fondo-cálido {
+    background-color: #ffe5f7; /* Crema con tono fucsia suave */
+  }
+  
+  .fondo-natural {
+    background-color: #e5fff2; /* Crema con tono verde agua */
+  }
+  
+  .fondo-delicado {
+    background-color: #e5eaff; /* Crema con tono lavanda */
+  }
+  
+  .fondo-palido {
+    background-color: #ffe5ea; /* Crema con tono salmón claro */
+  }
+  
+  .fondo-luminoso {
+    background-color: #ffefe5; /* Crema con tono terracota */
+  }
+  
+  .fondo-elegante {
+    background-color: #eaffff; /* Crema con tono turquesa */
+  }
+  
+  .fondo-dulce {
+    background-color: #fff0e5; /* Crema con tono miel */
+  }
+  
+  .fondo-suavidad {
+    background-color: #f3ffe5; /* Crema con tono lima suave */
+  }
