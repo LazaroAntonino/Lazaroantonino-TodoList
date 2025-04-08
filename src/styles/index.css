@@ -9,99 +9,175 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
 body {
-    background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
 }
+
 .list-item {
-    position: relative;
-    /* Para asegurar que el hijo (span) sea posicionado relativamente */
+  position: relative;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  /* Transición suave para el escalado */
 }
 
-.borrar-botón {
-    display: none;
-    /* Oculta inicialmente el botón */
-    color: rgb(255, 0, 0);
-    /* Cambia el estilo de la "X" si lo deseas */
-    cursor: pointer;
-    /* Muestra un puntero en el hover */
+.list-item:hover {
+  transform: scale(1.05);
+  /* Aumenta el tamaño al 105% cuando se pasa el ratón */
 }
 
-.list-item:hover .borrar-botón {
-    display: inline;
-    /* Muestra el botón cuando el ratón está sobre el elemento */
+.borrar-boton {
+  display: none;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
 }
+
+.list-item:hover .borrar-boton {
+  display: inline;
+}
+
+/* Paleta de colores actualizada */
+
 .fondo-primavera {
-    background-color: #ffe5e5; /* Crema con tono rojizo */
-  }
-  
-  .fondo-vintage {
-    background-color: #e5ffe5; /* Crema con tono verdoso */
-  }
-  
-  .fondo-suave {
-    background-color: #e5f7ff; /* Crema con tono azulado */
-  }
-  
-  .fondo-dorado {
-    background-color: #fff7e5; /* Crema con tono naranja */
-  }
-  
-  .fondo-marfil {
-    background-color: #f3e5ff; /* Crema con tono morado */
-  }
-  
-  .fondo-seda {
-    background-color: #ffffe5; /* Crema amarillo claro */
-  }
-  
-  .fondo-pureza {
-    background-color: #ffe5f3; /* Crema con tono rosa claro */
-  }
-  
-  .fondo-tranquilo {
-    background-color: #e5ffe9; /* Crema con tono verde suave */
-  }
-  
-  .fondo-cremoso {
-    background-color: #e5f3ff; /* Crema con tono azul pastel */
-  }
-  
-  .fondo-lujo {
-    background-color: #ffe9e5; /* Crema con tono coral */
-  }
-  
-  .fondo-tierra {
-    background-color: #fff2e5; /* Crema con tono marrón claro */
-  }
-  
-  .fondo-cálido {
-    background-color: #ffe5f7; /* Crema con tono fucsia suave */
-  }
-  
-  .fondo-natural {
-    background-color: #e5fff2; /* Crema con tono verde agua */
-  }
-  
-  .fondo-delicado {
-    background-color: #e5eaff; /* Crema con tono lavanda */
-  }
-  
-  .fondo-palido {
-    background-color: #ffe5ea; /* Crema con tono salmón claro */
-  }
-  
-  .fondo-luminoso {
-    background-color: #ffefe5; /* Crema con tono terracota */
-  }
-  
-  .fondo-elegante {
-    background-color: #eaffff; /* Crema con tono turquesa */
-  }
-  
-  .fondo-dulce {
-    background-color: #fff0e5; /* Crema con tono miel */
-  }
-  
-  .fondo-suavidad {
-    background-color: #f3ffe5; /* Crema con tono lima suave */
-  }
+  background-color: #FFD6D6;
+  /* Suave rosa pastel */
+}
+
+.fondo-vintage {
+  background-color: #DFF7DF;
+  /* Verde menta delicada */
+}
+
+.fondo-suave {
+  background-color: #D9EFFF;
+  /* Azul pastel calmado */
+}
+
+.fondo-dorado {
+  background-color: #FFF4D9;
+  /* Crema dorado claro */
+}
+
+.fondo-marfil {
+  background-color: #FFF8E7;
+  /* Marfil cálido */
+}
+
+.fondo-seda {
+  background-color: #FFFFE8;
+  /* Amarillo seda sutil */
+}
+
+.fondo-pureza {
+  background-color: #FFDDF0;
+  /* Rosa pálido y puro */
+}
+
+.fondo-tranquilo {
+  background-color: #DFF7E6;
+  /* Verde muy suave */
+}
+
+.fondo-cremoso {
+  background-color: #D9EDFF;
+  /* Azul cremoso y relajado */
+}
+
+.fondo-lujo {
+  background-color: #FFEBE5;
+  /* Coral pastel elegante */
+}
+
+.fondo-tierra {
+  background-color: #FFF2E5;
+  /* Tierra clara y cálida */
+}
+
+.fondo-cálido {
+  background-color: #FFE5F7;
+  /* Fucsia claro y delicado */
+}
+
+.fondo-natural {
+  background-color: #E5FFF2;
+  /* Verde agua refrescante */
+}
+
+.fondo-delicado {
+  background-color: #E5E8FF;
+  /* Lavanda delicada */
+}
+
+.fondo-palido {
+  background-color: #FFE5EA;
+  /* Salmón claro sutil */
+}
+
+.fondo-luminoso {
+  background-color: #FFF1E5;
+  /* Terracota muy suave */
+}
+
+.fondo-elegante {
+  background-color: #E8FFFF;
+  /* Turquesa elegante y sereno */
+}
+
+.fondo-dulce {
+  background-color: #FFF0E5;
+  /* Miel clara y dulce */
+}
+
+.fondo-suavidad {
+  background-color: #F3FFE5;
+  /* Lima pastel muy suave */
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+/* Estilos para el input */
+.todo-input {
+  width: 300px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilos para el botón actualizado */
+.btn-add-todo {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #6c757d;  /* Color más sutil y elegante */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-add-todo:hover {
+  background-color: #565e64; /* Un tono un poco más oscuro al hacer hover */
+  transform: scale(1.02);
+}
+
+.btn-add-todo:active {
+  transform: scale(0.98);
+}
