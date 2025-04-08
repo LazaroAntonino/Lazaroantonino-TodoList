@@ -4,31 +4,30 @@ export const Todolist = () => {
 
     const [list, setList] = useState([]);
     const [completedList, setCompletedList] = useState([]);
+    const [placeholder, setPlaceHolder] = useState([]);
     const [element, setElement] = useState("");
 
     const randomId = () => Math.floor(Math.random() * 9999);
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(element){
+        if (element) {
             const newItem = {
                 label: element,
                 id: randomId(),
                 fondo: fondoAleatorio(),
                 completed: false // Aquí defines si está completed o no
             };
-            
+
             if (newItem.completed) {
                 setCompletedList([...completedList, newItem]); // Si completed es true
             } else {
                 setList([...list, newItem]); // Si completed es false
             }
-            
+
             setElement(''); // Limpia el input
         }
     };
-
 
     const handleDelete = (id) => {
         let listaRemovida = list.filter(el => el.id != id)
@@ -58,21 +57,21 @@ export const Todolist = () => {
         }
     };
 
-
-
     const randomPlaceHolder = () => {
-        const arrayRandoms = [
-            "Ingrese su próxima tarea pendiente...",
-            "Planifique su actividad para alcanzar el éxito.",
-            "Registre su compromiso actual...",
-            "Establezca las prioridades de su jornada.",
-            "Defina su objetivo inmediato...",
-            "La organización es la clave del progreso.",
-            "Agregue una acción que impulse su productividad.",
-            "Comprométase con su meta diaria..."
-        ];
-        const placeholder = arrayRandoms[Math.floor(Math.random() * arrayRandoms.length)];
-        return placeholder;
+        if (element) {
+            const arrayRandoms = [
+                "Ingrese su próxima tarea pendiente...",
+                "Planifique su actividad para alcanzar el éxito.",
+                "Registre su compromiso actual...",
+                "Establezca las prioridades de su jornada.",
+                "Defina su objetivo inmediato...",
+                "La organización es la clave del progreso.",
+                "Agregue una acción que impulse su productividad.",
+                "Comprométase con su meta diaria..."
+            ];
+            const placeholder = arrayRandoms[Math.floor(Math.random() * arrayRandoms.length)];
+            setPlaceHolder(prev => prev = placeholder);
+        }
     };
 
 
@@ -112,9 +111,9 @@ export const Todolist = () => {
                     maxLength="30"
                     value={element}
                     onChange={e => setElement(e.target.value)}
-                    placeholder={randomPlaceHolder()}
+                    placeholder={placeholder.length > 3 ? placeholder : "Ingresa una frase"}
                 />
-                <button type="submit" className="btn-add-todo">
+                <button onClick={randomPlaceHolder} type="submit" className="btn-add-todo">
                     Añadir a la lista
                 </button>
             </form>
