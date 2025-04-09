@@ -121,7 +121,7 @@ export const Todolist = () => {
             <div className="d-flex justify-content-center">
                 <ul className="list-group list-group-flush w-50 bg-light bg-opacity-25 py-2 rounded h-auto">
                     <h3 className="mb-5">Pending</h3>
-                    {list.reverse().map(el => (
+                    {list.map(el => (
                         <li key={el.id} className={`list-group-item list-item p-3 mx-5 rounded mb-3 ${el.fondo} shadow-sm border`}>
                             {console.log(el)}
                             <span className="mx-2">{el.label}</span>
@@ -140,7 +140,7 @@ export const Todolist = () => {
                 {completedList.length > 0 &&(
                     <ul className="list-group list-group-flush w-50 bg-light bg-opacity-25 py-2 rounded h-auto">
                     <h3 className="mb-5">Done</h3>
-                    {completedList.reverse().map(el => (
+                    {completedList.map(el => (
                         <li key={el.id} className={`list-group-item list-item p-3 mx-5 rounded mb-3 ${el.fondo} bg-light shadow-sm border`}>
                             {console.log(el)}
                             <span className="mx-2 completed">{el.label}</span>
